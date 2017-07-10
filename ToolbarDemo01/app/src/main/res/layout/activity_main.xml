@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kenanozdamar.toolbardemo01.MainActivity">
+
+    <!--By using include different tool bar resource files can be included.
+    For exaple the elevation property only work in API v21 and above. 2 different layouts for the
+    toolbar can be created (using  layout-v21 folder. Android will dynamically use the correct one.
+    -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+</LinearLayout>

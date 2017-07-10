@@ -1,0 +1,31 @@
+<resources>
+
+    <style name="MaterialAppTheme" parent="ParentAppTheme">
+        <!--customize theme here. It will inherit all properties from ParentAppTheme-->
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="ParentAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        //main toolbar color
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        //status bar color
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        //ripple color
+        <item name="colorControlHighlight">#1ef1ab</item>
+
+        //color of buttons
+        <item name="colorButtonNormal">#f955f3</item>
+
+        //selected item color
+        <item name="colorControlActivated">#0cf427</item>
+    </style>
+
+</resources>

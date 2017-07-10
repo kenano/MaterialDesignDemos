@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ToolbarDemo01</string>
+
+    <!--for menu-->
+    <string name="delete">Delete</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="edit">Edit</string>
+    <string name="exit">Exit</string>
+</resources>

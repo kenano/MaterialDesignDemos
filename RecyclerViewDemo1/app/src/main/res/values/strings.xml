@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RecyclerViewDemo1</string>
+
+    <string name="LinearViewHorizontal">LinearView Horizontal</string>
+    <string name="GridView">GridView</string>
+    <string name="StaggeredViewHorizontal">StaggeredViewHorizontal</string>
+    <string name="StaggeredViewVertical">StaggeredViewVertical</string>
+    <string name="LinearViewVertical">LinearView Vertical </string>
+</resources>
