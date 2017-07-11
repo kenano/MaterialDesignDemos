@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("Home Page");
         toolbar.inflateMenu(R.menu.menu_main);
         toolbar.setOnMenuItemClickListener(this);
+
+        setupRecyclerView();
+    }
+
+    private void setupRecyclerView() {
+
     }
 
     @Override
