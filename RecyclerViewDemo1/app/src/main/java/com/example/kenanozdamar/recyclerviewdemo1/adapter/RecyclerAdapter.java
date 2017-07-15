@@ -2,6 +2,7 @@ package com.example.kenanozdamar.recyclerviewdemo1.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ import java.util.List;
  */
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+
+    private static final String TAG = RecyclerAdapter.class.getSimpleName();
 
     private List<NatureVista> data;
     private LayoutInflater layoutInflater;
@@ -45,9 +48,20 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
         NatureVista currentViewObject = this.data.get(position);
         holder.setData(currentViewObject, position);
+        holder.setListener();
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
+    public void addItem(int position, NatureVista natureVista) {
+        this.data.add(position, natureVista);
+        this.notifyItemInserted(position);
+    }
+
+    public void removeItem(int position) {
+        this.data.remove(position);
+        this.notifyItemRemoved(position);
+    }
+
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView title;
         ImageView imgThumb, imgDelete, imgAdd;
@@ -68,6 +82,25 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             this.imgThumb.setImageResource(currentViewObject.getImageID());
             this.position = position;
             this.current = currentViewObject;
+        }
+
+        public void setListener() {
+            this.imgAdd.setOnClickListener(MyViewHolder.this);
+            this.imgDelete.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Log.i(TAG, position + " " + data.size());
+
+            switch (view.getId()) {
+                case R.id.img_row_add:
+                    addItem(position, current);
+                    break;
+                case R.id.img_row_delete:
+                    removeItem(position);
+                    break;
+            }
         }
     }
 }

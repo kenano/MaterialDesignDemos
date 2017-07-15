@@ -47,6 +47,14 @@ public class RecycleAdapter  extends RecyclerView.Adapter<RecycleAdapter.MyViewH
         holder.setData(currentViewObject, position);
     }
 
+    public void addItem(int position){
+
+    }
+
+    public void removeItem(int position) {
+
+    }
+
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
