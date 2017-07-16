@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">RecyclerViewDemo1</string>
+
+    <!--menu -->
+    <string name="LinearViewHorizontal">LinearView Horizontal</string>
+    <string name="GridView">GridView</string>
+    <string name="StaggeredViewHorizontal">StaggeredViewHorizontal</string>
+    <string name="StaggeredViewVertical">StaggeredViewVertical</string>
+    <string name="LinearViewVertical">LinearView Vertical </string>
+
+    <!--list item-->
+    <string name="thumbnail">thumbnail</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="add_image">addImage</string>
+    <string name="delete_image">deleteImage</string>
+
+    <!--Navigation Drawer-->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+</resources>
