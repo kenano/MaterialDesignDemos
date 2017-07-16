@@ -124,6 +124,7 @@
 
             </LinearLayout>
 
+            <!--These elements have rippled animations enabled-->
             <TextView
                 android:id="@+id/txvRippleWithBorder"
                 android:layout_width="match_parent"
