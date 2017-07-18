@@ -10,4 +10,9 @@
     <dimen name="spacing_double">16dp</dimen>
     <dimen name="spacing_huge">72dp</dimen>
 
+
+    <!--animation values-->
+    <integer name="anim_duration_very_long">1000</integer>
+    <integer name="anim_duration_long">500</integer>
+    <integer name="anim_duration_medium">300</integer>
 </resources>

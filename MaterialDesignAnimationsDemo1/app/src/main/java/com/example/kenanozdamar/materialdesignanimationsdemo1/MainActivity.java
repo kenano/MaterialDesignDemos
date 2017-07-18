@@ -1,7 +1,10 @@
 package com.example.kenanozdamar.materialdesignanimationsdemo1;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Transition;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -61,6 +64,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.explodeJava:
 
+                //this obj must ve passed to Activity which will be transitioned to.
+                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this);
+                Intent intent = new Intent(MainActivity.this, TransitionActivity.class);
+                intent.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.ExplodeJava);
+                //pass the options obj as a bundle
+                startActivity(intent, options.toBundle());
+                break;
+            case R.id.explodeXML:
+                break;
+        }
     }
 }

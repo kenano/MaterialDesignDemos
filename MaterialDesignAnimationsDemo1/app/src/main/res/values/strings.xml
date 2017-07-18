@@ -13,4 +13,9 @@
     <string name="ripple_without_border">Ripple Without Border</string>
     <string name="custom_ripple_border">Custom Ripple With Border</string>
     <string name="custom_ripple_borderless">Custom Ripple Without Border</string>
+
+    <!--transition activity layout-->
+    <string name="description">Welcome to Android Material Design Animation Sample App.
+        This app contains basic demo codes of different types of animations in separate Activity.</string>
+
 </resources>
