@@ -75,6 +75,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent, options.toBundle());
                 break;
             case R.id.explodeXML:
+                //this obj must ve passed to Activity which will be transitioned to.
+                options = ActivityOptions.makeSceneTransitionAnimation(this);
+                intent = new Intent(MainActivity.this, TransitionActivity.class);
+                intent.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.ExplodeXML);
+                //pass the options obj as a bundle
+                startActivity(intent, options.toBundle());
+
                 break;
         }
     }
