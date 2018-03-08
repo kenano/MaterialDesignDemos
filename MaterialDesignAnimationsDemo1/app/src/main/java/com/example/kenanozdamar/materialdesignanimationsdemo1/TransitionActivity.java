@@ -5,8 +5,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 
@@ -70,6 +73,38 @@ public class TransitionActivity extends AppCompatActivity {
                 transitionAnimation.setDuration(1000);
                 getWindow().setEnterTransition(transitionAnimation);
                 break;
+
+            case SlideJava:
+                Slide enterAnimation = new Slide();
+                enterAnimation.setSlideEdge(Gravity.RIGHT);
+                enterAnimation.setDuration(1000);
+                getWindow().setEnterTransition(enterAnimation);
+                break;
+
+
+            case SlideXML: { // For Slide by XML
+
+                transitionAnimation  = TransitionInflater.from(this).inflateTransition(R.transition.slide);
+                transitionAnimation.setDuration(getResources().getInteger(R.integer.anim_duration_very_long));
+                getWindow().setEnterTransition(transitionAnimation);
+                break;
+            }
+
+            case FadeJava: { // For Fade By Code
+
+                Fade enterFadeAnimation = new Fade();
+                enterFadeAnimation.setDuration(getResources().getInteger(R.integer.anim_duration_long));
+                getWindow().setEnterTransition(enterFadeAnimation);
+                break;
+            }
+
+            case FadeXML: { // For Fade by XML
+
+                Transition enterFadeAnimation = TransitionInflater.from(this).inflateTransition(R.transition.fade);
+                enterFadeAnimation.setDuration(getResources().getInteger(R.integer.anim_duration_long));
+                getWindow().setEnterTransition(enterFadeAnimation);
+                break;
+            }
         }
     }
 }

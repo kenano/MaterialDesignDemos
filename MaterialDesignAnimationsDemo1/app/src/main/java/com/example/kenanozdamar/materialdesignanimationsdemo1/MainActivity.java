@@ -81,8 +81,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.ExplodeXML);
                 //pass the options obj as a bundle
                 startActivity(intent, options.toBundle());
+                break;
+
+            case R.id.slideJava:
+
+                //this obj must ve passed to Activity which will be transitioned to.
+                options = ActivityOptions.makeSceneTransitionAnimation(this);
+                intent = new Intent(MainActivity.this, TransitionActivity.class);
+                intent.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.SlideJava);
+                //pass the options obj as a bundle
+                startActivity(intent, options.toBundle());
 
                 break;
+
+            case R.id.slideXML : {
+
+                options = ActivityOptions.makeSceneTransitionAnimation(this);
+                Intent i = new Intent(MainActivity.this, TransitionActivity.class);
+                i.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.SlideXML);
+
+                startActivity(i, options.toBundle());
+
+                break;
+            }
+
+            case R.id.fadeJava : {
+
+                //noinspection unchecked
+                options = ActivityOptions.makeSceneTransitionAnimation(this);
+                Intent i = new Intent(MainActivity.this, TransitionActivity.class);
+                i.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.FadeJava);
+                startActivity(i, options.toBundle());
+
+                break;
+            }
+
+            case R.id.fadeXML : {
+
+                //noinspection unchecked
+                options = ActivityOptions.makeSceneTransitionAnimation(this);
+                Intent i = new Intent(MainActivity.this, TransitionActivity.class);
+                i.putExtra(TransitionActivity.KEY_ANIMATION_TYPE, AnimationType.FadeXML);
+                startActivity(i, options.toBundle());
+
+                break;
+            }
         }
     }
 }
